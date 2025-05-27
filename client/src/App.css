@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'F1font';
+  src: url('Formula1-Regular.otf');
+  font-weight:normal;
+  font-style:normal;
+}

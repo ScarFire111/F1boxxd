@@ -1,0 +1,91 @@
+.Navbar{
+    background: linear-gradient(to right, #5C0000, #1C1C1C);
+
+    display:flex;
+    justify-content: space-around;
+    padding:16px;
+    box-shadow: 0 1px 3px -2px black;
+    height:110px;
+}
+
+.nav-logo{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    width:150px;
+    height:auto;
+    background-color:rgba(0,0,0,0);
+}
+
+
+.nav-logo p{
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:600;
+}
+
+.nav-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+    color:#E0E0E0;
+    font-weight:800;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    font-size:20px;
+}
+
+.nav-menu li{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:3px;
+    cursor:pointer;
+}
+
+.nav-menu li:hover{
+    color:#D4AF37;
+}
+
+.nav-menu hr{
+    border:none;
+    width:80%;
+    height:3px;
+    border-radius:10px;
+    background:#D4AF37;
+}
+
+.nav-menu li:hover hr{
+width:80%;
+}
+
+.nav-login-cart{
+    display:flex;
+    align-items:center;
+    gap:45px;   
+    background-color:rgba(0,0,0,0);
+}
+
+.nav-login-cart button{
+    width:107px;
+    height:58px;
+    outline:none;
+    border: 1px solid #7a7a7a;
+    color:red;
+    font-size:20px;
+    font-weight:500;
+    border-radius:20px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    background-color:rgba(0,0,0,0.5);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-login-cart button:hover {
+    background-color: #D4AF37;
+    color: #1C1C1C;
+}
