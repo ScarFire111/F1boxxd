@@ -65,6 +65,51 @@
 .nav-menu li:hover hr{
 width:80%;
 }
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Search-text{
+    background:rgba(0,0,0,0.5);
+    padding:9px;
+    height:25px;
+    margin-top:-5%;
+    border:none;
+    outline:none;
+    box-shadow:rgba(0,0,0,0.5);
+    border-radius:10px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    color:darkred;
+    cursor:rgba(0,0,0,0.5);
+    font-size:20px;
+}
+.Search-text::placeholder{
+     font-size:20px;
+     font-family:'F1-font';
+     src:url('Formula1-Regular.otf');
+}
+.mic-button {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease;
+  margin-top:-8%;
+}
+
+.mic-button:hover {
+  transform: scale(1.1);
+}
 
 .nav-login-cart{
     display:flex;
@@ -74,18 +119,26 @@ width:80%;
 }
 
 .nav-login-cart button{
-    width:107px;
-    height:58px;
+    width:99px;
+    height:35px;
     outline:none;
-    border: 1px solid #7a7a7a;
-    color:red;
-    font-size:20px;
+    border: none;
+    color:darkred;
+    font-size:19px;
     font-weight:500;
-    border-radius:20px;
+    border-radius:5px;
     font-family:'F1-font';
     src:url('Formula1-Regular.otf');
-    background-color:rgba(0,0,0,0.5);
-    transition: background 0.3s ease, color 0.3s ease;
+    background-color:rgba(0,0,0, 0.853);
+    transition: background 0.3s ease, color 0.3s ease; 
+    margin-top:-5%;
+    margin-left:-10%;
+}
+.nav-login-cart img{
+    width:40px;
+    height:40px;
+    padding:15px;
+    margin-top:-5%;
 }
 
 .nav-login-cart button:hover {
@@ -106,3 +159,8 @@ width:80%;
     background:red;
     color:white;
 }
+
+
+
+
+
