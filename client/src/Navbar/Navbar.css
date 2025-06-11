@@ -12,19 +12,22 @@
     display:flex;
     align-items: center;
     gap: 10px;
-    width:150px;
     height:auto;
     background-color:rgba(0,0,0,0);
 }
 
-
-.nav-logo p{
-    font-family:'F1-font';
-    src:url('Formula1-Regular.otf');
-    color:#D4AF37;
-    font-size:28px;
-    font-weight:600;
+#logo{
+    font-family:monospace;
+    gap:4px;
+    font-weight:600; 
 }
+#F1 img{
+  height: 50px; 
+  width:auto;
+  display:inline-block;
+  vertical-align: middle;
+}
+
 
 .nav-menu{
     display:flex;
@@ -88,4 +91,18 @@ width:80%;
 .nav-login-cart button:hover {
     background-color: #D4AF37;
     color: #1C1C1C;
+}
+
+.nav-cart-count{
+    width:22px;
+    height:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:-35px;
+    margin-left:-55px;
+    border-radius:11px;
+    font-size:14px;
+    background:red;
+    color:white;
 }
