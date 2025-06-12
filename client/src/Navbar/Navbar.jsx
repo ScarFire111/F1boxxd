@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className='Navbar'>
       <div className='nav-logo'>
-        <img src={logo} alt='F1boxxd logo'></img>
+        <img src={logo} alt='F1boxxd logo' className='Nav-logoo'></img>
         <div id="logo">
           <span id="F1"><img src={cart_logo} alt="WebsiteLogo"></img></span>
         </div>

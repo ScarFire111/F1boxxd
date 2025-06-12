@@ -16,6 +16,11 @@
     background-color:rgba(0,0,0,0);
 }
 
+.Nav-logoo{
+    width:100px;
+    height:70px;
+}
+
 #logo{
     font-family:monospace;
     gap:4px;
