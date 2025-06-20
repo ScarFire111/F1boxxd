@@ -8,6 +8,11 @@
     height:110px;
 }
 
+.Navbar a{
+    text-decoration:none;
+    color:inherit;
+}
+
 .nav-logo{
     display:flex;
     align-items: center;
@@ -17,8 +22,8 @@
 }
 
 .Nav-logoo{
-    width:100px;
-    height:70px;
+    width:90px;
+    height:65px;
 }
 
 #logo{

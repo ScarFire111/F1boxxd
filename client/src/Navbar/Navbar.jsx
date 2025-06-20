@@ -4,6 +4,7 @@ import './Navbar.css';
 import cart_icon from '../assets/cart-logo.png';
 import logo from '../assets/nav-logo.png';
 import cart_logo from '../Navbar/f1.png';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState("");
@@ -30,18 +31,22 @@ const Navbar = () => {
 
   return (
     <div className='Navbar'>
+       <Link to='/homepage'>
       <div className='nav-logo'>
+       
         <img src={logo} alt='F1boxxd logo' className='Nav-logoo'></img>
         <div id="logo">
           <span id="F1"><img src={cart_logo} alt="WebsiteLogo"></img></span>
         </div>
       </div>
+      </Link>
 
       <ul className='nav-menu'>
-        <li>Clothes<hr></hr></li>
-        <li>Car Models<hr></hr></li>
-        <li>Engine Models<hr></hr></li>
-        <li>Posters<hr></hr></li>
+        <li><Link  to='/clothes' >Clothes<hr></hr></Link></li>
+        <li><Link to='/car_Models'>Car Models<hr></hr></Link></li>
+        <li><Link to='/engine_Models'>Engine Models<hr></hr></Link></li>
+        <li><Link to='/posters'>Posters<hr></hr></Link></li>
+        
       </ul>
 
       <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
@@ -61,9 +66,9 @@ const Navbar = () => {
       </form>
 
       <div className="nav-login-cart">
-        <button>Login</button>
-        <img src={cart_icon} alt="cart_icon"></img>
-        <div className='nav-cart-count'>0</div>
+       <Link to='./loginsignup'><button>Login</button></Link> 
+        <Link to='./cart'><img src={cart_icon} alt="cart_icon"></img></Link>
+       <div className='nav-cart-count'>0</div>
       </div>
     </div>
   );
