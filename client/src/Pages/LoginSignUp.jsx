@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-const Cart = () => {
-  return <div>Cart Component Placeholder</div>;
-};
-
-export default Cart;
+const LoginSignUp = () => {
+  return (
+    <div>LoginSignUp</div>
+  )
+}
+export default LoginSignUp;

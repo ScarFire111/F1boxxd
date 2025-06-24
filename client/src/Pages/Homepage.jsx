@@ -1,8 +1,10 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
-
-export const Homepage = () => {
+ const Homepage = () => {
   return (
-    <div><Hero/></div>
+    <div><Hero/>
+    </div>
+    
   )
 }
+export default Homepage;
