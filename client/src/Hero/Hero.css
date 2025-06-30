@@ -1,27 +1,32 @@
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: url(../assets/wallpaperforhero);
+  background:url(../assets/wallpaperforhero);
   background-size:cover;
   background-position:center;
+
+  align-items: center;
   color: #FFD700;
   padding: 4px 60px;
   height: 90vh;
   font-family:'F1 font';
   src:url(../assets/Formula1-Regular.otf);
+  
 }
+
 .hero-left {
+  position:relative;
   display: flex;
   flex-direction: column;
   justify-content:left;
   gap: 6px;
   width:40%;
   height:75vh;
+
 }
 .hero-left h2 {
   font-size: 50px;
-  color:#FFFFCC;
+  color:#FFFDD0;
   margin-bottom: 50px;
   margin-top:0;
   margin-right:0;
@@ -31,7 +36,7 @@
 }
 .hero-left p {
   font-size: 25px;
-  color:#FFFFCC;
+  color:#FFFDD0;
   margin-top:10px;
   margin-left:15%;
   padding:0;
@@ -71,14 +76,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom:25%;
   
 }
-.hero-hand-icon{
-  width:500px;
-  height:500px;
-  margin-bottom:-5%;
+
+.giticon{
+  display:flex;
+  margin-bottom:50px;
+  color:red;
+  font-size:35px;
 }
-.hero-hand-icon img {
-  object-fit: contain;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.7));
+
+.giticon:hover{
+  transform:scale(1.05);
+}
+.instaicon{
+  display:flex;
+  color:red;
+  font-size:35px;
+}
+.instaicon:hover{
+  transform:scale(1.05);
+}
+
+.form-container-sign-up{
+  margin-bottom:100%;
 }

@@ -1,12 +1,14 @@
 import React from 'react'
 import './Hero.css'
-import legendsart from '../assets/legendsart.png'
+
+
 
 export const Hero = () => {
   return (
     <div className='hero'>
+   
         <div className="hero-left">
-          <h2>Michael Schumacher edition with many more classics!</h2>
+          <h2>Max Verstappen edition with many more classics!</h2>
           <p>We will help you</p>
           <p>Choose the best for yourself</p>
 
@@ -14,9 +16,19 @@ export const Hero = () => {
          
         </div>
         <div className="hero-right">
-           <div className='hero-hand-icon'>
-            <img src={legendsart} alt=" "></img>
-            </div>  
+              <div className="form-container-sign-up">
+            <form>
+              <div className="social-icons">
+                <a href="https://github.com/ScarFire111/F1boxxd.git" className="giticon" target="_blank">
+                  <i className="fa-brands fa-github"></i>
+                </a>
+                 <a href="https://instagram.com/rish_829" className="instaicon" target="_blank">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+            
+              </div>
+            </form>
+          </div>
         </div>
         
     </div>
