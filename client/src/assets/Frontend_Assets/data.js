@@ -6,29 +6,30 @@ import p4_img from './product_4.png'
 let data_product = [
   {
     id:1,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name:"Miami 2025 Half Sleeved Tshirt",
     image:p1_img,
-    new_price:50.00,
-    old_price:80.50,
+    new_price:500.00,
+    old_price:800.50,
   },
   {id:2,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name:"Miami 2025 Half Sleeved shirt",
     image:p2_img,
-    new_price:85.00,
-    old_price:120.50,
+    new_price:850.00,
+    old_price:1200.50,
   },
   {id:3,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name:"Ferrari 2025 Tshirt",
     image:p3_img,
-    new_price:60.00,
-    old_price:100.50,
+    new_price:600.00,
+    old_price:1000.50,
   },
   {id:4,
-    name:"Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+    name:"Lando Norris Austria Tshirt",
     image:p4_img,
-    new_price:100.00,
-    old_price:150.00,
-  },
+    new_price:600.00,
+    old_price:1500,
+  }
+
 ];
 
 export default data_product;

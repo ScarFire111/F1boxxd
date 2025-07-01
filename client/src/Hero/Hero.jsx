@@ -10,7 +10,7 @@ export const Hero = () => {
         <div className="hero-left">
           <h2>Max Verstappen edition with many more classics!</h2>
           <p>We will help you</p>
-          <p>Choose the best for yourself</p>
+          <p>choose the best for yourself</p>
 
           <div className="hero-latest-button">See-More</div>
          

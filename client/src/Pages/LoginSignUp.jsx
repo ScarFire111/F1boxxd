@@ -1,5 +1,6 @@
 import React from 'react'
 import '../CSS/LoginSignUp.css'
+import Popular from '../Popular/Popular'
 
 const LoginSignUp = () => {
   return (
