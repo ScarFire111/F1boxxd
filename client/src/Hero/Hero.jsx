@@ -10,7 +10,7 @@ export const Hero = () => {
         <div className="hero-left">
           <h2>Max Verstappen edition with many more classics!</h2>
           <p>We will help you</p>
-          <p>choose the best for yourself</p>
+          <p>Choose the best for yourself</p>
 
           <div className="hero-latest-button">See-More</div>
          
@@ -23,6 +23,9 @@ export const Hero = () => {
                   <i className="fa-brands fa-github"></i>
                 </a>
                  <a href="https://instagram.com/rish_829" className="instaicon" target="_blank">
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.instagram.com/chuddant/" className="instaicon" target="_blank">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
             

@@ -170,6 +170,24 @@ width:80%;
     background:red;
     color:white;
 }
+.nav-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-icon {
+  width: 40px;       /* Adjust size as needed */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.settings-icon:hover {
+  transform: scale(1.1); /* Optional zoom effect on hover */
+}
 
 
 

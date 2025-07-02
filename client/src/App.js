@@ -6,7 +6,7 @@ import Cart from './Pages/Cart';
 import Product from './Pages/Product';
 import LoginSignUp from './Pages/LoginSignUp';
 import Homepage from './Pages/Homepage';
-
+import SignUp from './Pages/SignUp';
 function App() {
   return (
     <div className="App">
@@ -22,6 +22,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/loginsignup' element={<LoginSignUp />} />
           <Route path='/homepage' element={<Homepage />} />
+          <Route path="/createaccount" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </div>
