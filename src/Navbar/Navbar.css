@@ -1,0 +1,179 @@
+.Navbar{
+    background: linear-gradient(to right, #5C0000, #1C1C1C);
+
+    display:flex;
+    justify-content: space-around;
+    padding:16px;
+    box-shadow: 0 1px 3px -2px black;
+    height:70px;
+    border-bottom:gray 0.5px;
+}
+
+.Navbar a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.nav-logo{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    height:auto;
+    background-color:rgba(0,0,0,0);
+}
+
+.Nav-logoo{
+    width:90px;
+    height:65px;
+}
+
+#logo{
+    font-family:monospace;
+    gap:4px;
+    font-weight:600; 
+}
+#F1 img{
+  height: 50px; 
+  width:auto;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+
+.nav-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    align-items:center;
+    color:#E0E0E0;
+    font-weight:800;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    font-size:20px;
+}
+
+.nav-menu li{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:3px;
+    cursor:pointer;
+}
+
+.nav-menu li:hover{
+    color:#D4AF37;
+}
+
+.nav-menu hr{
+    border:none;
+    width:80%;
+    height:3px;
+    border-radius:10px;
+    background:#D4AF37;
+}
+
+.nav-menu li:hover hr{
+width:80%;
+}
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Search-text{
+    background:rgba(0,0,0,0.5);
+    padding:9px;
+    height:25px;
+    margin-top:-5%;
+    border:none;
+    outline:none;
+    box-shadow:rgba(0,0,0,0.5);
+    border-radius:10px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    color:darkred;
+    cursor:rgba(0,0,0,0.5);
+    font-size:20px;
+}
+.Search-text::placeholder{
+     font-size:20px;
+     font-family:'F1-font';
+     src:url('Formula1-Regular.otf');
+}
+.mic-button {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease;
+  margin-top:-8%;
+}
+
+.mic-button:hover {
+  transform: scale(1.1);
+}
+
+.nav-login-cart{
+    display:flex;
+    align-items:center;
+    gap:45px;   
+    background-color:rgba(0,0,0,0);
+}
+
+.nav-login-cart button{
+    width:99px;
+    height:35px;
+    outline:none;
+    border: none;
+    color:darkred;
+    font-size:19px;
+    font-weight:500;
+    border-radius:5px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    background-color:rgba(0,0,0, 0.853);
+    transition: background 0.3s ease, color 0.3s ease; 
+    margin-top:-5%;
+    margin-left:-10%;
+}
+.nav-login-cart img{
+    width:40px;
+    height:40px;
+    padding:15px;
+    margin-top:-5%;
+}
+
+.nav-login-cart button:hover {
+    background-color: #D4AF37;
+    color: #1C1C1C;
+}
+
+.nav-cart-count{
+    width:22px;
+    height:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:-35px;
+    margin-left:-55px;
+    border-radius:11px;
+    font-size:14px;
+    background:red;
+    color:white;
+}
+
+
+
+
+
+
+
