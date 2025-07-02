@@ -30,9 +30,10 @@
     text-align:center;
 }
 
-.item:hover{
+.items:hover{
     transform:scale(1.1);
-   
+    transition:0.6s;
+    
 }
 
 .items img{
