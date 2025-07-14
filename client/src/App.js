@@ -7,6 +7,7 @@ import Product from './Pages/Product';
 import LoginSignUp from './Pages/LoginSignUp';
 import Homepage from './Pages/Homepage';
 import SignUp from './Pages/SignUp';
+import Footer from './Footer/Footer'
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
           <Route path='/homepage' element={<Homepage />} />
           <Route path="/createaccount" element={<SignUp />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );

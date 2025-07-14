@@ -1,0 +1,52 @@
+.footer{
+    gap:20px;
+    font-family:'F1 font';
+    src:url(../assets/Formula1-Regular.otf);
+    background:linear-gradient(to right, #4B0000, #1a1a1a);
+    height:50vh;
+    color:#FFFDD0;
+}
+.footer-left{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.footer-left img{
+    width:200px;
+    height:100px;
+    margin-right:75%;
+    margin-top:100px;
+}
+
+.footer-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-left:50%;
+    
+}
+
+.footer-right p{
+    font-size:40px;
+    font-weight:400;
+    margin-top:-20%;
+    margin-left:-50%;
+    padding:10px;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    margin-top:-1%;
+    gap:40px;
+    margin-left:0%;
+    font-size:20px;
+   
+}
+
+
+hr{
+    margin-top:100px;
+}

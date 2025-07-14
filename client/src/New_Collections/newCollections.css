@@ -7,14 +7,13 @@
     font-family:'F1-font';
     src:url(../assets/Formula1-Regular.otf);
     justify-content:center;
-    
-    
 }
 
 .new-Collections h1{
     color:#171717;
     font-size:50px;
     font-weight:600;
+    gap:none;
    
 }
 .new-Collections hr{
