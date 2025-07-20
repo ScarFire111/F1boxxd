@@ -74,17 +74,26 @@
 .hero-right {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-bottom:25%;
   
 }
+
+.social-icons{
+  padding:5px;
+  display:flex;
+  flex-direction:column;
+}
+
+
 
 .giticon{
   display:flex;
   margin-bottom:50px;
   color:red;
   font-size:35px;
+  margin-bottom:-5%;
 }
 
 .giticon:hover{

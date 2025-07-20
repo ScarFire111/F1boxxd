@@ -71,14 +71,10 @@ const Navbar = () => {
        <div className='nav-cart-count'>0</div>
        <div></div>
       </div>
-      <div className="nav-settings">
-  <Link to="/settings">
-    <img src="/path/to/settings.png" alt="Settings" className="settings-icon" />
-  </Link>
 </div>
 
 
-    </div>
+   
     
   );
 }

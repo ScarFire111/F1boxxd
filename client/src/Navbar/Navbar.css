@@ -50,6 +50,7 @@
     font-family:'F1-font';
     src:url('Formula1-Regular.otf');
     font-size:20px;
+    margin-top:1%;
 }
 
 .nav-menu li{
@@ -59,6 +60,7 @@
     flex-direction:column;
     gap:3px;
     cursor:pointer;
+
 }
 
 .nav-menu li:hover{
@@ -71,6 +73,7 @@
     height:3px;
     border-radius:10px;
     background:#D4AF37;
+    margin-top:5%;
 }
 
 .nav-menu li:hover hr{
@@ -170,24 +173,7 @@ width:80%;
     background:red;
     color:white;
 }
-.nav-settings {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.settings-icon {
-  width: 40px;       /* Adjust size as needed */
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.settings-icon:hover {
-  transform: scale(1.1); /* Optional zoom effect on hover */
-}
 
 
 
