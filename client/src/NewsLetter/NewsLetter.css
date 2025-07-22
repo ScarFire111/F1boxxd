@@ -1,0 +1,63 @@
+
+.newsletter{
+    width:65%;
+    height:40vh;
+    display:flex;
+    flex-direction:center;
+    align-items:center;
+    margin:auto;
+    padding:0px 140px;
+    margin-bottom:150px;
+    background:linear-gradient(to right, #5C0000, #1C1C1C 60%); 
+     font-family:'F1-font';
+    src:url(../assets/Formula1-Regular.otf);
+    gap:30px;
+    margin-bottom:100px;
+}
+
+.newsletter h1{
+    display:flex;
+    color:#FFFDD0;
+    font-size:55px;
+    font-weight:600;
+}
+
+
+
+.newsletter div{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(0,0,0,0.5);
+    width:730px;
+    height:55px;
+    border-radius:80px;
+    border:1px solid #e3e3e3;
+}
+
+.newsletter input{
+    width:500px;
+    margin-left:30px;
+    border:none;
+    outline:none;
+    color:darkred;
+    background:none;
+    font-size:20px;
+}
+
+.newsletter div button{
+    width:210px;
+    height:70px;
+    border-radius:80px;
+    background:#FFFDD0;
+    color:black;
+    font-family:inherit;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.newsletter div button:hover{
+    background:gold;
+    box-shadow:0 4px rgba(0,0,0,0.12);
+    transform:scale(1.04);
+}
