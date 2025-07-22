@@ -25,7 +25,7 @@ const LoginSignUp = () => {
           <p className="login-footer-text">
            Don't have an account? <Link to="/createaccount">Sign up</Link>
           </p>
-
+    <div></div>
 
           <div className="social-icons">
             <span>Or login with</span>
