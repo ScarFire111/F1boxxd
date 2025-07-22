@@ -25,9 +25,7 @@ export const Hero = () => {
                  <a href="https://instagram.com/rish_829" className="instaicon" target="_blank">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.instagram.com/chuddant/" className="instaicon" target="_blank">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
+            
             
               </div>
             </form>

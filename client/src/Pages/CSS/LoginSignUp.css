@@ -3,7 +3,11 @@
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background: linear-gradient(to right, #5C0000, #1C1C1C);
+  background: url(../../assets/sunset.gif);
+  background-position:center;
+  background-size:cover;
+  font-family:'F1-font';
+  src:url(../../assets/Formula1-Regular.otf);
 }
 
 .form-container-login {
