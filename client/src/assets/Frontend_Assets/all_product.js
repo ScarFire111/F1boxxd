@@ -169,8 +169,8 @@ let all_product = [
       name: "RB19 DIY Model Car",
       image: p17_img,
       category:"car_Models",
-      new_price: 60.0,
-      old_price: 100.5,
+      new_price: 6000.0,
+      old_price: 10000.5,
   },
   {
     id: 18,
