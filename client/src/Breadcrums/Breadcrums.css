@@ -3,9 +3,8 @@
     align-items:center;
     gap:8px;
     color:linear-gradient(to right, darkred,black);
-    font-family:'F1-font';
-    src:url(../assets/Formula1-Regular.otf);
-    font-size:19px;
+   
+    font-size:17px;
     font-weight:600;
     margin:60px 170px;
     text-transform: capitalize;

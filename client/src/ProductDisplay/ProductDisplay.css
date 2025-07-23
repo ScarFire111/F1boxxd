@@ -1,8 +1,6 @@
 .productdisplay{
     display:flex;
     margin:0px 170px;
-    font-family:'f1-font';
-    src:url(../assets/Formula1-Regular.otf);
 }
 
 .productdisplay-left{

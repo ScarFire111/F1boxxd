@@ -6,8 +6,6 @@
   background: linear-gradient(to right,darkred,black);
   background-position:center;
   background-size:cover;
-  font-family:'F1-font';
-  src:url(../../assets/Formula1-Regular.otf);
 }
 
 .form-container-login {

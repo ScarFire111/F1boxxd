@@ -9,8 +9,7 @@
   color: #FFD700;
   padding: 4px 60px;
   height: 90vh;
-  font-family:'F1 font';
-  src:url(../assets/Formula1-Regular.otf);
+
   
 }
 
@@ -25,7 +24,7 @@
 
 }
 .hero-left h2 {
-  font-size: 50px;
+  font-size: 35px;
   color:#FFFDD0;
   margin-bottom: 50px;
   margin-top:0;
@@ -37,7 +36,7 @@
 .hero-left p {
   font-size: 25px;
   color:#FFFDD0;
-  margin-top:10px;
+  margin-top:30px;
   margin-left:15%;
   padding:0;
   margin-bottom:-3%;
@@ -46,7 +45,7 @@
     text-shadow:1px 1px 1px rgba(0,0,0,1);
 }
 .hero-latest-button {
-  margin-top: 55px;
+  margin-top: 150px;
   padding: 12px 24px;
   background-color: rgba(255, 69, 0, 0.8);
   color: #1C1C1C;

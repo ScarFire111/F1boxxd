@@ -1,6 +1,4 @@
 .cartitems{
-   font-family:'F1-font';
-   src:url(../assets/Formula1-Regular.otf);
    margin:100px 170px;
 
 }
@@ -18,7 +16,7 @@
     gap:75px;
     padding:20px 0px;
     color:#454545;
-    font-size:18px;
+    font-size:16px;
     font-weight:600;
 }
 

@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to left, #1C1C1C, #5C0000);
-  font-family:'F1-font';
-  src:url(../../assets/Formula1-Regular.otf);
 }
 
 .signup-container {
