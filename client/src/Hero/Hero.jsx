@@ -22,16 +22,10 @@ export const Hero = () => {
                 <a href="https://github.com/ScarFire111/F1boxxd.git" className="giticon" target="_blank">
                   <i className="fa-brands fa-github"></i>
                 </a>
-<<<<<<< HEAD
-                 <a href="https://instagram.com/rish_829" className="instaicon" target="_blank">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-            
-=======
-                 <a href="https://www.instagram.com/f1boxxd/" className="instaicon" target="_blank">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
->>>>>>> 115abd64ca7bc256967cc9fa24411f190e0f53b2
+<a href="https://instagram.com/rish_829" className="instaicon" target="_blank">
+  <i className="fa-brands fa-instagram"></i>
+</a>
+
             
               </div>
             </form>
