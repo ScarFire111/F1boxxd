@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navbar.css';
 
 import cart_icon from '../assets/cart-logo.png';
 import logo from '../assets/nav-logo.png';
 import cart_logo from '../Navbar/f1.png';
 import {Link} from 'react-router-dom';
+import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
+  const {getTotalCartItems}=useContext(ShopContext);
   const [searchText, setSearchText] = useState("");
+
 
   const handleVoiceSearch = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -42,7 +45,7 @@ const Navbar = () => {
       </Link>
 
       <ul className='nav-menu'>
-        <li><Link  to='/clothes' >Clothes<hr></hr></Link></li>
+        <li><Link to='/clothes' >Clothes<hr></hr></Link></li>
         <li><Link to='/car_Models'>Car Models<hr></hr></Link></li>
         <li><Link to='/engine_Models'>Engine Models<hr></hr></Link></li>
         <li><Link to='/posters'>Posters<hr></hr></Link></li>
@@ -68,7 +71,7 @@ const Navbar = () => {
       <div className="nav-login-cart">
        <Link to='./loginsignup'><button>Login</button></Link> 
         <Link to='./cart'><img src={cart_icon} alt="cart_icon"></img></Link>
-       <div className='nav-cart-count'>0</div>
+       <div className='nav-cart-count'>{getTotalCartItems()}</div>
        <div></div>
       </div>
 </div>

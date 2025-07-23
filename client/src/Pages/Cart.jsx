@@ -1,11 +1,12 @@
 import React from 'react'
-import Hero from '../Hero/Hero'
+import './CSS/Cart.css'
+import { Cartitems } from '../Cartitems/Cartitems';
 
 const Cart = () => {
   return (
-    <div>
-      <Hero />
+    <div className='cart'>
+        <Cartitems/>
     </div>
   )
 }
-export default Cart;
+export default Cart

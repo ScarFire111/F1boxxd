@@ -1,0 +1,94 @@
+.productdisplay{
+    display:flex;
+    margin:0px 170px;
+    font-family:'f1-font';
+    src:url(../assets/Formula1-Regular.otf);
+}
+
+.productdisplay-left{
+    display:flex;
+    gap:17px;
+}
+
+.productdisplay-img-list{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+.productdisplay-img-list img{
+    height:163px;
+}
+
+.productdisplay-main-img{
+    width:550px;
+    height:600px;
+}
+
+.productdisplay-right{
+    margin:0px 70px;
+    display:flex;
+    flex-direction:column;
+}
+
+.productdisplay-right h1{
+    color:black;
+    font-size:40px;
+    font-weight:700;
+    text-align:left;
+}
+
+.productdisplay-right-star{
+    display:flex;
+    align-items:center;
+    margin-top:5px;
+    gap:5px;
+    color:#1c1c1c;
+    font-size:16px;
+   
+}
+.productdisplay-right-prices{
+    display:flex;
+    margin:20px 20px;
+    gap:30px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.productdisplay-right-price-old{
+    color:#818181;
+    text-decoration:line-through;
+}
+
+.productdisplay-right-price-new{
+    color:darkred;
+}
+.productdisplay-right-description{
+    margin-top:5px;
+    padding:20px;
+    text-align:left;
+    font-size:18px;
+    color:darkgray;
+}
+
+.productdisplay-right button{
+    padding:20px 40px;
+    width:200px;
+    font-size:16px;
+    font-weight:600;
+    color:black;
+    background:#FF4141;
+    margin-bottom:40px;
+    border:none;
+    outline:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-left:15px;
+    align-items:left;
+    
+}
+
+.productdisplay-right button:hover{
+    background:yellow;
+    transition:0.1s;
+}
