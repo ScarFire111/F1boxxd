@@ -16,18 +16,6 @@ app.use(cors()); //react will connect to express at 4000 port, this is also nece
 mongoose.connect("mongodb+srv://ScarFire:Rishav123@cluster0.7jhukes.mongodb.net/F1boxxd");
 
 //API creation now//
-app.get("/",(req,res)=>{
-    res.send("Express is running");
-
-})
-app.listen(port,(error)=>{
-   if(!error){
-    console.log("Server running on port"+port)
-   }
-   else{
-    console.log("Error")
-   }
-});
 
 //image storage engine//
 
@@ -90,7 +78,7 @@ const Product=mongoose.model("Product",{
 app.post('/addproduct',async(req,res)=>{
     let products=await Product.find({});
     let id;
-    if(product.length>0){
+    if(products.length>0){
         let last_product_array=products.slice(-1);
         let last_product=last_product_array[0];
         id=last_product.id+1;
@@ -125,3 +113,24 @@ app.post('/removeproduct',async(req,res)=>{
     name:req.body.name
    })
 })
+
+//Creating api for getting all products from frontend//
+
+app.get('/allproducts',async(req,res)=>{
+   let products= await Product.find({});
+   console.log("All products fetched");
+   res.send(products);
+})
+
+app.get("/",(req,res)=>{
+    res.send("Express is running");
+
+})
+app.listen(port,(error)=>{
+   if(!error){
+    console.log("Server running on port"+port)
+   }
+   else{
+    console.log("Error")
+   }
+});
