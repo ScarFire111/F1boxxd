@@ -14,3 +14,8 @@ npm install multer
 npm install cors
 
 after doing this, go to mongodb atlas and make your accounts
+
+now do cd admin
+
+npm create vite@latest .
+npm install
