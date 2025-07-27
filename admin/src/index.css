@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Formula1';
+  src: url('../src/assets/Formula1-Regular.otf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Formula1', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f6f6f6;
+  height:100vh;
+}
