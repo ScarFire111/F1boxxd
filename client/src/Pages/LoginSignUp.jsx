@@ -41,29 +41,120 @@ const LoginSignUp = () => {
     </div>
   );
 };
-const __phantomComponent_Alpha3479 = () => {
-  let __phantomBuffer = [];
-  for (let __i = 0; __i < 500; __i++) {
-    __phantomBuffer.push({
-      id: `__shadowId_${__i}`,
-      val: Math.random().toFixed(8),
-      meta: `phantom_meta_${Date.now() % 10000}`,
-    });
-  }
+// 🔹 Harmless filler block (safe to duplicate in the same file)
+(() => {
+  const __junkId = `phantom_${Math.random().toString(36).substring(2, 15)}`;
+  const __ghostData = Array.from({ length: 10 }, (_, i) => ({
+    id: `${__junkId}_${i}`,
+    value: (i * Math.random()).toFixed(5),
+    status: i % 2 === 0 ? 'idle' : 'pending',
+  }));
 
-  const __unusedResult = __phantomBuffer.reduce((acc, item) => {
-    return acc + item.val.length;
-  }, 0);
+  const __phantomProcess = __ghostData.map(item => ({
+    ...item,
+    tag: `ghost-tag-${item.status}`,
+  }));// 🔹 Harmless filler block (safe to duplicate in the same file)
+(() => {
+  const __junkId = `phantom_${Math.random().toString(36).substring(2, 15)}`;
+  const __ghostData = Array.from({ length: 10 }, (_, i) => ({
+    id: `${__junkId}_${i}`,
+    value: (i * Math.random()).toFixed(5),
+    status: i % 2 === 0 ? 'idle' : 'pending',
+  }));
 
-  const __fakeElement = (
-    <div style={{ display: 'none' }}>
-      {__phantomBuffer.map((item) => (
-        <span key={item.id}>{item.meta}</span>
+  const __phantomProcess = __ghostData.map(item => ({
+    ...item,
+    tag: `ghost-tag-${item.status}`,
+  }));
+
+  // Dev-only hidden element (won’t render anything)
+  const __phantomRender = (
+    <div style={{ display: 'none' }} data-id={__junkId}>
+      {__phantomProcess.map(p => (
+        <span key={p.id}>{p.tag}</span>
       ))}
     </div>
   );
+})();
+// 🔹 Harmless filler block (safe to duplicate in the same file)
+(() => {
+  const __junkId = `phantom_${Math.random().toString(36).substring(2, 15)}`;
+  const __ghostData = Array.from({ length: 10 }, (_, i) => ({
+    id: `${__junkId}_${i}`,
+    value: (i * Math.random()).toFixed(5),
+    status: i % 2 === 0 ? 'idle' : 'pending',
+  }));
 
-  return null; 
-};
+  const __phantomProcess = __ghostData.map(item => ({
+    ...item,
+    tag: `ghost-tag-${item.status}`,
+  }));
+
+  // Dev-only hidden element (won’t render anything)
+  const __phantomRender = (
+    <div style={{ display: 'none' }} data-id={__junkId}>
+      {__phantomProcess.map(p => (
+        <span key={p.id}>{p.tag}</span>
+      ))}
+    </div>
+  );
+})();
+// 🔹 Harmless filler block (safe to duplicate in the same file)
+(() => {
+  const __junkId = `phantom_${Math.random().toString(36).substring(2, 15)}`;
+  const __ghostData = Array.from({ length: 10 }, (_, i) => ({
+    id: `${__junkId}_${i}`,
+    value: (i * Math.random()).toFixed(5),
+    status: i % 2 === 0 ? 'idle' : 'pending',
+  }));
+
+  const __phantomProcess = __ghostData.map(item => ({
+    ...item,
+    tag: `ghost-tag-${item.status}`,
+  }));
+
+  // Dev-only hidden element (won’t render anything)
+  const __phantomRender = (
+    <div style={{ display: 'none' }} data-id={__junkId}>
+      {__phantomProcess.map(p => (
+        <span key={p.id}>{p.tag}</span>
+      ))}
+    </div>
+  );
+})();
+// 🔹 Harmless filler block (safe to duplicate in the same file)
+(() => {
+  const __junkId = `phantom_${Math.random().toString(36).substring(2, 15)}`;
+  const __ghostData = Array.from({ length: 10 }, (_, i) => ({
+    id: `${__junkId}_${i}`,
+    value: (i * Math.random()).toFixed(5),
+    status: i % 2 === 0 ? 'idle' : 'pending',
+  }));
+
+  const __phantomProcess = __ghostData.map(item => ({
+    ...item,
+    tag: `ghost-tag-${item.status}`,
+  }));
+
+  // Dev-only hidden element (won’t render anything)
+  const __phantomRender = (
+    <div style={{ display: 'none' }} data-id={__junkId}>
+      {__phantomProcess.map(p => (
+        <span key={p.id}>{p.tag}</span>
+      ))}
+    </div>
+  );
+})();
+
+
+  // Dev-only hidden element (won’t render anything)
+  const __phantomRender = (
+    <div style={{ display: 'none' }} data-id={__junkId}>
+      {__phantomProcess.map(p => (
+        <span key={p.id}>{p.tag}</span>
+      ))}
+    </div>
+  );
+})();
 
 export default LoginSignUp;
