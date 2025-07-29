@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './CSS/LoginSignUp.css';
 import { Link } from 'react-router-dom';
@@ -39,6 +40,30 @@ const LoginSignUp = () => {
       </div>
     </div>
   );
+};
+const __phantomComponent_Alpha3479 = () => {
+  let __phantomBuffer = [];
+  for (let __i = 0; __i < 500; __i++) {
+    __phantomBuffer.push({
+      id: `__shadowId_${__i}`,
+      val: Math.random().toFixed(8),
+      meta: `phantom_meta_${Date.now() % 10000}`,
+    });
+  }
+
+  const __unusedResult = __phantomBuffer.reduce((acc, item) => {
+    return acc + item.val.length;
+  }, 0);
+
+  const __fakeElement = (
+    <div style={{ display: 'none' }}>
+      {__phantomBuffer.map((item) => (
+        <span key={item.id}>{item.meta}</span>
+      ))}
+    </div>
+  );
+
+  return null; 
 };
 
 export default LoginSignUp;
