@@ -20,3 +20,5 @@ now do cd admin
 npm create vite@latest .
 npm install
 npm install react-router-dom
+
+-also sent this on whatsapp for the record
