@@ -34,4 +34,6 @@ const ShopCategory = (props) => {
     </div>
   )
 }
+
+
 export default ShopCategory

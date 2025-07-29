@@ -16,4 +16,5 @@ import NewsLetter from '../NewsLetter/NewsLetter'
     
   )
 }
+
 export default Homepage;
