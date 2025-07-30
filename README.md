@@ -1,10 +1,105 @@
+<div align="center">
+
 # 🏎️ F1 Marketplace
 ### *Premium Formula One E-Commerce Platform*
+
+<p align="center">
+  <strong>Bridging the gap between Formula One passion and premium merchandise accessibility</strong>
+</p>
+
+<p align="center">
+  <a href="#-quick-start">
+    <img src="https://img.shields.io/badge/📖-Get%20Started-blue?style=for-the-badge" alt="Get Started" />
+  </a>
+</p>
 
 ---
 
 ## 📖 About The Project
+<br>
+
 **F1 Marketplace** is a cutting-edge e-commerce platform that revolutionizes the Formula One merchandise experience. Born from the passion of Formula One enthusiasts and the identified gap in quality F1 merchandise availability, particularly in Nepal and surrounding regions.
+
+---
+
+## ✨ Features
+
+<div align="center">
+
+### 🛍️ **Core E-Commerce Features**
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+**🛒 Smart Shopping Cart**
+<br>
+Real-time updates, persistent storage, quantity management, and seamless checkout flow
+
+</td>
+<td align="center" width="33%">
+
+**👤 User Management**
+<br>
+Secure authentication, profile management, order history, and personalized experience
+
+</td>
+<td align="center" width="33%">
+
+**📦 Product Catalog**
+<br>
+Dynamic filtering, search functionality, detailed product views, and category browsing
+
+</td>
+</tr>
+</table>
+
+### 🚀 **Advanced Features**
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+**🎤 Voice Search**
+<br>
+<img src="https://img.shields.io/badge/ASR-Enabled-blue?style=flat-square" alt="ASR Enabled">
+<br>
+Hands-free product search using Web Speech API
+
+</td>
+<td align="center" width="25%">
+
+**💳 UPI Payments**
+<br>
+<img src="https://img.shields.io/badge/PayTM-Integrated-orange?style=flat-square" alt="PayTM Integration">
+<br>
+Secure UPI transactions with PayTM API
+
+</td>
+<td align="center" width="25%">
+
+**🤖 AI Assistant**
+<br>
+<img src="https://img.shields.io/badge/LLM-Optional-green?style=flat-square" alt="LLM Optional">
+<br>
+Intelligent chatbot for customer support
+
+</td>
+<td align="center" width="25%">
+
+**📱 Responsive Design**
+<br>
+<img src="https://img.shields.io/badge/Mobile-Optimized-purple?style=flat-square" alt="Mobile Optimized">
+<br>
+Seamless experience across all devices
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
 
 ## 🛠️ Technology Stack
 
@@ -38,13 +133,119 @@
 <p>
   <img src="https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions" />
+
 </p>
-
-
 
 </div>
 
+---
 
+## 🏗️ System Architecture
+
+<div align="center">
+
+### **High-Level Architecture**
+
+```mermaid
+graph TB
+    subgraph "Client Layer"
+        A[React Frontend] --> B[Service Worker]
+        B --> C[PWA Features]
+    end
+    
+    subgraph "API Gateway"
+        D[Load Balancer] --> E[Rate Limiting]
+        E --> F[Authentication Middleware]
+    end
+    
+    subgraph "Backend Services"
+        G[Express.js API] --> H[Business Logic]
+        H --> I[Data Access Layer]
+    end
+    
+    subgraph "Database Layer"
+        J[(MySQL Primary)] --> K[(MySQL Replica)]
+        L[(Redis Cache)]
+    end
+    
+    subgraph "External Services"
+        M[PayTM API]
+        N[Web Speech API]
+        O[OpenAI API]
+        P[AWS S3]
+    end
+    
+    subgraph "Monitoring & Analytics"
+        Q[Application Logs]
+        R[Performance Metrics]
+        S[Error Tracking]
+    end
+    
+    A --> D
+    F --> G
+    I --> J
+    I --> L
+    G --> M
+    A --> N
+    G --> O
+    G --> P
+    G --> Q
+    A --> R
+    G --> S
+```
+
+### **Database Schema**
+
+```mermaid
+erDiagram
+    USERS ||--o{ ORDERS : "places"
+    USERS ||--o{ CART_ITEMS : "has"
+    USERS ||--o{ REVIEWS : "writes"
+    PRODUCTS ||--o{ ORDER_ITEMS : "included_in"
+    PRODUCTS ||--o{ CART_ITEMS : "added_to"
+    PRODUCTS ||--o{ REVIEWS : "receives"
+    ORDERS ||--o{ ORDER_ITEMS : "contains"
+    CATEGORIES ||--o{ PRODUCTS : "contains"
+    
+    USERS {
+        uuid id PK
+        string email UK
+        string password_hash
+        string first_name
+        string last_name
+        json profile_data
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    PRODUCTS {
+        uuid id PK
+        string name
+        text description
+        decimal price
+        int stock_quantity
+        uuid category_id FK
+        json specifications
+        string[] image_urls
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    ORDERS {
+        uuid id PK
+        uuid user_id FK
+        enum status
+        decimal total_amount
+        json shipping_address
+        string payment_id
+        timestamp created_at
+        timestamp updated_at
+    }
+```
+
+</div>
+
+---
 ## 👥 Meet the Team
 
 This project is a collaborative effort by students of the Department of Computer Science and Engineering, Kathmandu University.
@@ -55,4 +256,5 @@ This project is a collaborative effort by students of the Department of Computer
 | Chuddant Shrestha       |   43     | [Chuddant](https://github.com/chuddantshrestha)              |
 | Manjit Singh           |   47     | [Manjit](https://github.com/ManjitSingh121) |
 | Subash Chandra Yadav    |   58     | [Subash](https://github.com/su-bash-np)                 |
+
 
