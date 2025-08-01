@@ -24,17 +24,20 @@ const storage=multer.diskStorage({
     filename :(req,file,cb)=>{
         return (cb,null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
     }
-});
+})
 
 const upload=multer({storage:storage})
 app.use('/images',express.static('upload/images'))
 //creating upload endpoint for imgs//
 app.post("/upload",upload.single('product'),(req,res)=>{
+    if (!req.file) {
+        return res.status(400).json({ success: 0, message: "No file uploaded" });
+    }
     res.json({
         success:1,
-        img_url:`http://locahost:${port}/images/${req.file.filename}`
+        image_url:`http://localhost:${port}/images/${req.file.filename}`
     })
-});
+})
 
 
 //Schema for creating products//
@@ -73,7 +76,7 @@ const Product=mongoose.model("Product",{
         type:Boolean,
         default:true,
     },
-});
+})
 
 app.post('/addproduct',async(req,res)=>{
     let products=await Product.find({});
@@ -93,7 +96,7 @@ app.post('/addproduct',async(req,res)=>{
         category:req.body.category,
         new_price:req.body.new_price,
         old_price:req.body.old_price,
-    });
+    })
     console.log(product);
     await product.save();
     console.log("Saved");
@@ -133,4 +136,4 @@ app.listen(port,(error)=>{
    else{
     console.log("Error")
    }
-});
+})
