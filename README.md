@@ -48,7 +48,7 @@ Secure authentication, profile management, order history, and personalized exper
 
 **📦 Product Catalog**
 <br>
-Dynamic filtering, search functionality, detailed product views, and category browsing
+ search functionality, detailed product views, and category browsing
 
 </td>
 </tr>
@@ -71,9 +71,9 @@ Hands-free product search using Web Speech API
 
 **💳 UPI Payments**
 <br>
-<img src="https://img.shields.io/badge/PayTM-Integrated-orange?style=flat-square" alt="PayTM Integration">
+<img src="https://img.shields.io/badge/PayTM-Integrated-orange?style=flat-square" >
 <br>
-Secure UPI transactions with PayTM API
+Working transaction through Khalti Sandbox API
 
 </td>
 <td align="center" width="25%">
@@ -87,11 +87,6 @@ Intelligent chatbot for customer support
 </td>
 <td align="center" width="25%">
 
-**📱 Responsive Design**
-<br>
-<img src="https://img.shields.io/badge/Mobile-Optimized-purple?style=flat-square" alt="Mobile Optimized">
-<br>
-Seamless experience across all devices
 
 </td>
 </tr>
