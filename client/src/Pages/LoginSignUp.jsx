@@ -3,7 +3,9 @@ import React from 'react';
 import './CSS/LoginSignUp.css';
 import { Link } from 'react-router-dom';
 
-
+const login=async()=>{
+  
+}
 const LoginSignUp = () => {
   return (
     <div className="loginSignUp" id="LoginSignUp">
