@@ -3,11 +3,12 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const axios = require("axios");
 
 const app = express();
 const port = 4000;
-const jwt = require("jsonwebtoken");
-const axios = require('axios');
+
 
 // Middleware
 app.use(express.json());
