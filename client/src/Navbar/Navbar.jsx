@@ -90,9 +90,22 @@ const Navbar = () => {
       </form>
 
       <div className="nav-login-cart">
-        <Link to='./loginsignup'><button>Login</button></Link>
-        <Link to='./cart'><img src={cart_icon} alt="cart_icon" /></Link>
-        <div className='nav-cart-count'>{getTotalCartItems()}</div>
+<div className="nav-login-cart">
+  {localStorage.getItem('auth-token')
+    ? (
+      <button onClick={() => {
+        localStorage.removeItem('auth-token');
+        window.location.replace("/");
+      }}>
+        LogOut
+      </button>
+    )
+    : (
+      <Link to='./loginsignup'><button>Login</button></Link>
+    )}
+  <Link to='./cart'><img src={cart_icon} alt="cart_icon" /></Link>
+  <div className='nav-cart-count'>{getTotalCartItems()}</div>
+</div>
       </div>
     </div>
   );
