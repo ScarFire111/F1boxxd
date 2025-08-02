@@ -1,26 +1,54 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import './CSS/LoginSignUp.css';
 import { Link } from 'react-router-dom';
 
-const login=async()=>{
-  
-}
 const LoginSignUp = () => {
+
+  const [formData,setFormData]=useState({
+    email:"",
+    username:"",
+    password:""
+  })
+
+  const changeHandler=(e)=>{
+     setFormData({...formData,[e.target.name]:e.target.value})
+  }
+  const login=async(e)=>{
+
+   e.preventDefault();
+   let responseData;
+   await fetch('http://localhost:4000/login',{
+    method:'POST',
+    headers:{
+      Accept:'application/json',
+      'Content-Type':'application/json',
+    },
+       body:JSON.stringify(formData),
+   }).then((response)=>response.json()).then((data)=>responseData=data)
+      if(responseData.success){
+    localStorage.setItem('auth-token',responseData.token);
+    window.location.replace("/");
+   }
+   else{
+    alert(responseData.errors);
+   }
+    console.log("Login executed",formData);
+  }
   return (
     <div className="loginSignUp" id="LoginSignUp">
       <div className="form-container-login">
-        <form>
+        <form onSubmit={login}>
           <h1>Login</h1>
 
           <div className="input-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input name='email' type="email" placeholder="Enter your email" value={formData.email} onChange={changeHandler} required />
           </div>
 
           <div className="input-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <input name='password' type="password" placeholder="Enter your password" value={formData.password} onChange={changeHandler} required />
           </div>
 
           <button type="submit" className="login-button">Login</button>
