@@ -1,139 +1,185 @@
-const port=4000;
-const express=require("express");
-const app=express();
-const mongoose=require("mongoose");
-const jwt=require("jsonwebtoken");
-const multer=require("multer");
-const path=require("path");
-const cors=require("cors");
+const express = require("express");
+const mongoose = require("mongoose");
+const multer = require("multer");
+const path = require("path");
+const cors = require("cors");
 
-//initializing of dependencies was this//
-
+const app = express();
+const port = 4000;
+const jwt = require("jsonwebtoken");
+// Middleware
 app.use(express.json());
-app.use(cors()); //react will connect to express at 4000 port, this is also necessary//
+app.use(cors());
 
-//Database connection now//
-mongoose.connect("mongodb+srv://ScarFire:Rishav123@cluster0.7jhukes.mongodb.net/F1boxxd");
+// MongoDB connection
+mongoose.connect(
+  "mongodb+srv://ScarFire:Rishav123@cluster0.7jhukes.mongodb.net/F1boxxd",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 
-//API creation now//
+// Ensure upload/images directory exists
+const fs = require("fs");
+const uploadDir = path.join(__dirname, "upload", "images");
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
 
-//image storage engine//
+// Multer storage config
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, uploadDir);
+  },
+  filename: function (req, file, cb) {
+    cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
+  },
+});
+const upload = multer({ storage: storage });
+app.use("/images", express.static(uploadDir));
 
-const storage=multer.diskStorage({
-    destination:'./upload/images',
-    filename :(req,file,cb)=>{
-        return (cb,null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-    }
-})
+// Product schema
+const Product = mongoose.model("Product", {
+  id: { type: Number, required: true },
+  name: { type: String, required: true },
+  image: { type: String, required: true },
+  category: { type: String, required: true },
+  new_price: { type: Number, required: true },
+  old_price: { type: Number, required: true },
+  date: { type: Date, default: Date.now },
+  available: { type: Boolean, default: true },
+});
 
-const upload=multer({storage:storage})
-app.use('/images',express.static('upload/images'))
-//creating upload endpoint for imgs//
-app.post("/upload",upload.single('product'),(req,res)=>{
-    if (!req.file) {
-        return res.status(400).json({ success: 0, message: "No file uploaded" });
-    }
-    res.json({
-        success:1,
-        image_url:`http://localhost:${port}/images/${req.file.filename}`
-    })
-})
+//api for upload
+app.post("/upload", upload.single("product"), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ success: false, message: "No file uploaded" });
+  }
+  res.json({
+    success: true,
+    image_url: `http://localhost:${port}/images/${req.file.filename}`,
+  });
+});
 
+//api for add product
+app.post("/addproduct", async (req, res) => {
+  try {
+    const products = await Product.find({});
+    let id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
 
-//Schema for creating products//
+    const product = new Product({
+      id: id,
+      name: req.body.name,
+      image: req.body.image,
+      category: req.body.category,
+      new_price: req.body.new_price,
+      old_price: req.body.old_price,
+    });
 
-const Product=mongoose.model("Product",{
-    id:{
-        type:Number,
-        required:true,
-    },
+    await product.save();
+    res.json({ success: true, product });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+//api for removeproduct
+app.post("/removeproduct", async (req, res) => {
+  try {
+    await Product.findOneAndDelete({ id: req.body.id });
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+//api for all products
+app.get("/allproducts", async (req, res) => {
+  try {
+    const products = await Product.find({});
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+const Users=mongoose.model('Users',{
     name:{
         type:String,
-        required:true
     },
-    image:{
+    email:{
         type:String,
-        required:true,
+        unique:true,
     },
-    category:{
+    password:{
         type:String,
-        required:true,
     },
-    new_price:{
-        type:Number,
-        required:true,
-    },
-    old_price:{
-        type:Number,
-        required:true,
+    cartData:{
+        type:Object,
     },
     date:{
         type:Date,
         default:Date.now,
-
-    },
-    available:{
-        type:Boolean,
-        default:true,
-    },
+    }
 })
 
-app.post('/addproduct',async(req,res)=>{
-    let products=await Product.find({});
-    let id;
-    if(products.length>0){
-        let last_product_array=products.slice(-1);
-        let last_product=last_product_array[0];
-        id=last_product.id+1;
+//Creating endpoint for registering the user//
+
+app.post('/signup',async(req,res)=>{
+    let check=await Users.findOne({email:req.body.email});
+    if(check){
+        return res.status(400).json({success:false,errors:"existing user found with same email address"});
+    }
+
+   
+    let cart = {};
+    for (let i = 0; i < 300; i++) {
+    cart[i] = 0;
+}
+    const user=new Users({
+        name:req.body.username,
+        email:req.body.email,
+        password:req.body.password,
+        cartData:cart,
+    })
+    await user.save();
+    const data={
+        user:{
+            id:user.id
+        }
+    }
+    const token=jwt.sign(data,'secret_ecom');
+    res.json({success:true,token})
+})
+
+//creating endpoint for userlogin//
+
+app.post('/login',async(req,res)=>{
+    let user=await Users.findOne({email:req.body.email});
+    if(user){
+        const passCompare=req.body.password===user.password;
+        if(passCompare){
+            const data={
+                user:{
+                    id:user.id
+                }
+            }
+            const token=jwt.sign(data,'secret_ecom');
+            res.json({success:true,token});
+        }
+        else{
+            res.json({success:false,errors:"Wrong password"});
+        }
     }
     else{
-        id=1;
+        res.json({success:false,errors:"Wrong Email Id"})
+
     }
-    const product=new Product({
-        id:req.body.id,
-        name:req.body.name,
-        image:req.body.image,
-        category:req.body.category,
-        new_price:req.body.new_price,
-        old_price:req.body.old_price,
-    })
-    console.log(product);
-    await product.save();
-    console.log("Saved");
-    res.json({
-        success:true,
-        name:req.body.name,
-    })
 })
 
-//Creating api for deleting products//
+app.get("/", (req, res) => {
+  res.send("Express is running");
+});
 
-app.post('/removeproduct',async(req,res)=>{
-   await Product.findOneAndDelete({id:req.body.id});
-   console.log("Removed");
-   res.json({
-    success:true,
-    name:req.body.name
-   })
-})
+app.listen(port, () => {
+  console.log("Server running on port " + port);
+});
 
-//Creating api for getting all products from frontend//
-
-app.get('/allproducts',async(req,res)=>{
-   let products= await Product.find({});
-   console.log("All products fetched");
-   res.send(products);
-})
-
-app.get("/",(req,res)=>{
-    res.send("Express is running");
-
-})
-app.listen(port,(error)=>{
-   if(!error){
-    console.log("Server running on port"+port)
-   }
-   else{
-    console.log("Error")
-   }
-})

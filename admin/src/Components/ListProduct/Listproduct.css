@@ -25,3 +25,17 @@
     align-items:center;
     font-weight:600;
 }
+
+.listproduct-product-item{
+    height:80px;
+    width:100px;
+}
+
+.listproduct-remove-icon{
+    cursor:pointer;
+    margin:auto;
+}
+
+.listproduct-allproducts{
+    overflow-y: auto;
+}
