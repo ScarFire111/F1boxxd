@@ -1,4 +1,4 @@
-this is for subash and manjit, do these to get the site working
+this is for subash and manjit, do these to get the site working in frontend
 
 npm install react-router-dom
 npm install @fortawesome/fontawesome-free 
@@ -12,6 +12,7 @@ npm install jsonwebtoken
 npm install mongoose
 npm install multer
 npm install cors
+npm install jsonwebtoken
 
 after doing this, go to mongodb atlas and make your accounts
 
