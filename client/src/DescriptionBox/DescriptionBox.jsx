@@ -10,7 +10,7 @@ export const DescriptionBox = () => {
         </div>
         <div className="descriptionbox-description">
             <p>Discover premium quality with our handpicked selection of must-have essentials, tailored for modern lifestyles. Whether you're upgrading your wardrobe, refreshing your home, or finding the perfect gift, we've got something special for everyone. Trusted by over 10,000 happy customers and counting!</p>
-            <p>Idk man i wanna kMS</p>
+            <p>We need to add more description</p>
         </div>
     </div>
   )

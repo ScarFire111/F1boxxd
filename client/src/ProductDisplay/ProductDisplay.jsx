@@ -39,7 +39,7 @@ export const ProductDisplay = (props) => {
                 </div>
             </div>
             <div className="productdisplay-right-description">
-              LightWeight Good shit thats good for you, good for me, you know
+              Shortcoming on our behalf, product description api has not been yet added
             </div>
             <button onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
             <p className="productdisplay-right-category"></p>
