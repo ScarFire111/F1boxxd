@@ -1,6 +1,6 @@
 .Navbar{
     background: linear-gradient(to right, #5C0000, #1C1C1C);
-
+    position: relative;
     display:flex;
     justify-content: space-around;
     padding:16px;
@@ -47,9 +47,9 @@
     align-items:center;
     color:#E0E0E0;
     font-weight:800;
-   
-    font-size:15px;
-    margin-top:1%;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
+    font-size:20px;
 }
 
 .nav-menu li{
@@ -59,7 +59,6 @@
     flex-direction:column;
     gap:3px;
     cursor:pointer;
-
 }
 
 .nav-menu li:hover{
@@ -72,7 +71,6 @@
     height:3px;
     border-radius:10px;
     background:#D4AF37;
-    margin-top:5%;
 }
 
 .nav-menu li:hover hr{
@@ -93,12 +91,16 @@ width:80%;
     outline:none;
     box-shadow:rgba(0,0,0,0.5);
     border-radius:10px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
     color:darkred;
     cursor:rgba(0,0,0,0.5);
     font-size:20px;
 }
 .Search-text::placeholder{
      font-size:20px;
+     font-family:'F1-font';
+     src:url('Formula1-Regular.otf');
 }
 .mic-button {
   position: absolute;
@@ -137,6 +139,8 @@ width:80%;
     font-family:inherit;
     font-weight:500;
     border-radius:5px;
+    font-family:'F1-font';
+    src:url('Formula1-Regular.otf');
     background-color:rgba(0,0,0, 0.853);
     transition: background 0.3s ease, color 0.3s ease; 
     margin-top:-5%;
@@ -166,6 +170,62 @@ width:80%;
     font-size:14px;
     background:red;
     color:white;
+}
+.nav-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-icon {
+  width: 40px;       
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.settings-icon:hover {
+  transform: scale(1.1); 
+}
+.search-wrapper {
+  position: relative;
+  width: 250px;  /* same width as input */
+}
+
+.Search-text {
+  width: 100%; /* fill wrapper */
+  box-sizing: border-box; /* include padding in width */
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;   /* just below input */
+  left: 0;     /* align left edges */
+  width: 100%; /* fill wrapper */
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results li:hover {
+  background-color: #f9f9f9;
+}
+
+.search-results a {
+  display: block;
+  color: black;
+  text-decoration: none;
 }
 
 
