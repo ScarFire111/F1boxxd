@@ -90,7 +90,6 @@
 .giticon{
   display:flex;
   margin-bottom:50px;
-  color:red;
   font-size:35px;
   margin-bottom:-5%;
 }
@@ -100,7 +99,6 @@
 }
 .instaicon{
   display:flex;
-  color:red;
   font-size:35px;
   padding-bottom: 50px;
 }

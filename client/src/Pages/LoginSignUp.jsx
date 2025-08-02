@@ -54,9 +54,9 @@ const LoginSignUp = () => {
           <button type="submit" className="login-button">Login</button>
 
           <p className="login-footer-text">
-           Don't have an account? <Link to="/createaccount">Sign up</Link>
+           Don't have an account? <Link to="/createaccount" className="signuplink">Sign up</Link>
           </p>
-          <a></a>
+        
           <div className="social-icons">
             <span>Or login with</span>
             <a href="#" className="icon">

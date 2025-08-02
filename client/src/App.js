@@ -11,6 +11,7 @@ import Footer from './Footer/Footer'
 import clothes_banner from './assets/Frontend_Assets/banner_mens.png'
 import carModels_banner from './assets/Frontend_Assets/banner_women.png'
 import engineModels_banner from './assets/Frontend_Assets/banner_kids.png'
+import PaymentCheckout from './Pages/PaymentCheckout';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/loginsignup' element={<LoginSignUp />} />
           <Route path='/homepage' element={<Homepage />} />
           <Route path="/createaccount" element={<SignUp />} />
+          <Route path="/paymentgateaway" element={<PaymentCheckout/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

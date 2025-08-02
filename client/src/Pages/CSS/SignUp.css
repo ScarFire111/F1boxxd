@@ -3,11 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left, #1C1C1C, #5C0000);
+  background: url(../../assets/sunset.gif);
+  background-size:cover;
 }
 
 .signup-container {
-  background: #fff;
+  background: rgba(0,0,0,0.2);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -18,7 +19,7 @@
 .signup-form h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #333;
+  color: lightgray;
 }
 
 .input-group {
@@ -50,6 +51,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-family:inherit;
 }
 
 .signup-btn:hover {
@@ -60,12 +62,14 @@
 .signup-footer {
   text-align: center;
   margin-top: 15px;
+  color:#FFFDD0;
 }
 
 .signup-footer a {
-  color: #5C0000;
+  color: gold;
   text-decoration: none;
   font-weight: 600;
+
 }
 
 .social-login {
@@ -76,6 +80,7 @@
 .social-login span {
   display: block;
   margin-bottom: 10px;
+  color:red;
 }
 
 .icons {
@@ -86,7 +91,7 @@
 
 .icon {
   font-size: 24px;
-  color: #333;
+  color: gold;
   text-decoration: none;
 }
 

@@ -3,6 +3,7 @@ import './Cartitems.css'
 import all_product from '../assets/Frontend_Assets/all_product'
 import { ShopContext } from '../context/ShopContext'
 import remove_icon from '../assets/Frontend_Assets/cart_cross_icon.png'
+import {Link} from 'react-router-dom'
 
 export const Cartitems = () => {
     const {getTotalCartAmount,all_product,cartItems,removeFromCart}=useContext(ShopContext);
@@ -50,7 +51,8 @@ export const Cartitems = () => {
                     <h3>Total</h3>
                     <h3>Rs.{getTotalCartAmount()}</h3>
                 </div>
-                <button>CHECKOUT</button>
+                <Link to="/paymentgateaway">
+                <button>CHECKOUT</button></Link>
             </div>
         </div>
     </div>

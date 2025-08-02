@@ -47,9 +47,7 @@
     align-items:center;
     color:#E0E0E0;
     font-weight:800;
-    font-family:'F1-font';
-    src:url('Formula1-Regular.otf');
-    font-size:20px;
+    font-size:16px;
 }
 
 .nav-menu li{
@@ -80,27 +78,26 @@ width:80%;
   position: relative;
   display: flex;
   align-items: center;
+
 }
 
 .Search-text{
     background:rgba(0,0,0,0.5);
     padding:9px;
-    height:25px;
+    height:40px;
     margin-top:-5%;
     border:none;
     outline:none;
     box-shadow:rgba(0,0,0,0.5);
     border-radius:10px;
-    font-family:'F1-font';
-    src:url('Formula1-Regular.otf');
     color:darkred;
     cursor:rgba(0,0,0,0.5);
     font-size:20px;
+    font-family:inherit;
 }
 .Search-text::placeholder{
-     font-size:20px;
-     font-family:'F1-font';
-     src:url('Formula1-Regular.otf');
+     font-size:15px;
+     font-family:inherit;
 }
 .mic-button {
   position: absolute;
@@ -115,7 +112,7 @@ width:80%;
   height: 30px;
   width: 30px;
   transition: transform 0.2s ease;
-  margin-top:-8%;
+  margin-top:-15%;
 }
 
 .mic-button:hover {
@@ -139,8 +136,6 @@ width:80%;
     font-family:inherit;
     font-weight:500;
     border-radius:5px;
-    font-family:'F1-font';
-    src:url('Formula1-Regular.otf');
     background-color:rgba(0,0,0, 0.853);
     transition: background 0.3s ease, color 0.3s ease; 
     margin-top:-5%;
