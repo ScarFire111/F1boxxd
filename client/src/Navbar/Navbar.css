@@ -136,6 +136,7 @@ width:80%;
     border: none;
     color:darkred;
     font-size:19px;
+    font-family:inherit;
     font-weight:500;
     border-radius:5px;
     font-family:'F1-font';
