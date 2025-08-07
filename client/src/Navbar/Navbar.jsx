@@ -107,8 +107,12 @@ const Navbar = () => {
   <div className='nav-cart-count'>{getTotalCartItems()}</div>
 </div>
       </div>
+      <div></div>
     </div>
   );
 }
 
 export default Navbar;
+
+
+
