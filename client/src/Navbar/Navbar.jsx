@@ -107,7 +107,7 @@ const Navbar = () => {
   <div className='nav-cart-count'>{getTotalCartItems()}</div>
 </div>
       </div>
-      <div></div>
+      <p></p>
     </div>
   );
 }
